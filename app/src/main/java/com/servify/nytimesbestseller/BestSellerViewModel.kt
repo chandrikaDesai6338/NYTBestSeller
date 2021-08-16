@@ -13,7 +13,7 @@ class BestSellerViewModel(private val apiHelper: ApiHelper) : ViewModel() {
     fun getBestSellerList() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = apiHelper.getBestSellerList("z5nnAf9mwyqEta2OjxgvOJiLA6gLCfDM")))
+            emit(Resource.success(data = apiHelper.getBestSellerList(BuildConfig.APIKEY)))
         } catch (e: Exception) {
             emit(Resource.error(data = null, message = e.localizedMessage ?: "Network Error!!"))
         }
@@ -24,8 +24,7 @@ class BestSellerViewModel(private val apiHelper: ApiHelper) : ViewModel() {
         try {
             emit(
                 Resource.success(
-                    data = apiHelper.getBestSellerBooksList(
-                        "z5nnAf9mwyqEta2OjxgvOJiLA6gLCfDM",
+                    data = apiHelper.getBestSellerBooksList(BuildConfig.APIKEY,
                         listName
                     )
                 )
