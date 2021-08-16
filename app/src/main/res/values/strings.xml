@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NYTimes Best Seller</string>
+    <string name="best_seller">NY Times Best Seller</string>
+    <string name="books">Best Seller Books</string>
+    <string name="error">Error!!</string>
+    <string name="monthly">Monthly</string>
+    <string name="weekly">Weekly</string>
+</resources>

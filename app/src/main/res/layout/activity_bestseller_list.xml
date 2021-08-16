@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BestSellerActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/tvErrormsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/error"
+        android:visibility="gone"
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/tvWeekly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/weekly"
+        android:textColor="@color/teal_green"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBestSellerWeekly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWeekly"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvMonthly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/monthly"
+        android:layout_below="@+id/rvBestSellerWeekly"
+        android:textColor="@color/teal_green"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBestSellerMonthly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMonthly"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
+   </androidx.core.widget.NestedScrollView>

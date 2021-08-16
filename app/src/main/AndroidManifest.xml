@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.servify.nytimesbestseller">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_untitled_design__3_"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_untitled_design__3_"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.NYTimesBestSeller">
+        <activity android:name=".ui.BooksActivity"
+            android:label="@string/books"/>
+        <activity android:name=".ui.BestSellerActivity"
+            android:label="@string/best_seller">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
